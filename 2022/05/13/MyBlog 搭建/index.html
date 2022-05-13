@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, Mr.Chen">
+    <meta name="keywords" content="Mr.Chen">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | Mr.Chen</title>
+    <title>Mr.Chen</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -417,12 +417,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">categories</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -571,7 +571,81 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="MyBlog-搭建"><a href="#MyBlog-搭建" class="headerlink" title="MyBlog 搭建"></a>MyBlog 搭建</h1><h1 id="使用hexo框架"><a href="#使用hexo框架" class="headerlink" title="使用hexo框架"></a>使用hexo框架</h1><h2 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1,安装node.js"></a>1,安装node.js</h2><blockquote>
+<p>node.js:<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a></p>
+</blockquote>
+<p>安装完成后进入终端</p>
+<p>查看版本</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#查看node版本</span><br><span class="line">node -v</span><br><span class="line">#查看npm版本</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-安装hexo博客框架"><a href="#2-安装hexo博客框架" class="headerlink" title="2,安装hexo博客框架"></a>2,安装hexo博客框架</h2><p>安装前</p>
+<p>由于npm外网比较慢,用cnpm来安装,,所以先借助npm来安装cnpm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#-p代表全局安装</span><br><span class="line">npm install -g cnmp --registry=https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line">#查看cnpm版本</span><br><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>如果脚本被阻止了:参考:<a>https:/go.microsoft.com/fwlink/?LinkID=135170</a>这里进行设置</p>
+<p>更改执行策略</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#更改策略</span><br><span class="line">Set-ExecutionPolicy -ExecutionPolicy Bypass</span><br><span class="line">#再次查看cnpm版本,就是测试可不可用</span><br><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+
+<p><strong>全局安装hexo博客框架</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#全局安装hexo</span><br><span class="line">cnpm install -g hexo-cli</span><br><span class="line">#查看</span><br><span class="line">hexo -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>建立一个blog文件夹,,不想用了/出错了,直接删除这个文件夹可以重新开始,</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#创建一个文件夹,用来生成博客</span><br><span class="line">mkdir blog</span><br><span class="line">#进入blog目录</span><br><span class="line">cd blog</span><br><span class="line">#使用hexo生成</span><br><span class="line">hexo init</span><br><span class="line">#查看生成文件</span><br><span class="line">ls</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>启动hexo</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#启动</span><br><span class="line">hexo s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>本地启动默认在4000端口,即:<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></p>
+<p>新建一篇文章——-支持md</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文章标题&quot;</span><br></pre></td></tr></table></figure>
+
+<p>博客搭建到此完成</p>
+<hr/>
+
+<h2 id="3-部署到远程"><a href="#3-部署到远程" class="headerlink" title="3,部署到远程"></a>3,部署到远程</h2><p>这里使用免费的,直接部署到GitHub上去</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#在blog目录下安装git插件</span><br><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>1.注册一个GitHub账号</p>
+<p>2.建立一个同名仓库且以.github.io结尾  (xxx.github.io)</p>
+<p>3.将此地址映射到blog配置文件中</p>
+</blockquote>
+<blockquote>
+<p><strong>终端vim编辑命令不可用</strong></p>
+<p>vim官网:<a target="_blank" rel="noopener" href="https://www.vim.org/download.php">download : vim online</a></p>
+<p>下载对应的版本</p>
+<p>配置环境变量重启终端即可</p>
+</blockquote>
+<p>修改blog下的_config.yml文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>进入编辑界面——–末行(deployment配置项)——i进入编辑模式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;deploy</span><br><span class="line">type:git</span><br><span class="line">repo:https://github.com/Achenzhiguo/Achenzhiguo.github.io.git #你的github创建的远程库地址</span><br><span class="line">branch:master #不写默认也是master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#退出编辑模式</span><br><span class="line">Esc</span><br><span class="line">定位到末行</span><br><span class="line">shift+:</span><br><span class="line">#保存并退出</span><br><span class="line">wq</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#部署到远程</span><br><span class="line">hexo d</span><br><span class="line">#输入账号密码即可</span><br><span class="line">xxx</span><br></pre></td></tr></table></figure>
+
+<p>刷新github可看到多了一些文件,,,推送成功</p>
+<p>然后就可以使用    xxx.github.io    作为你的网址直接可以访问了</p>
+<h2 id="4-更换blog主题"><a href="#4-更换blog主题" class="headerlink" title="4.更换blog主题"></a>4.更换blog主题</h2><blockquote>
+<p>自定义一个主题</p>
+<p>下载地址: github.com/litten/hexo-theme-yilia</p>
+</blockquote>
+<p>在blog目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#克隆值blog下的themes/yilia中</span><br><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line">#修改根目录下的_config.yml中的theme: yilia</span><br><span class="line">vim _config.yml</span><br><span class="line">	i进入编辑模式</span><br><span class="line">	themes: yilia</span><br><span class="line">wq</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>修改完成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#清理</span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">#重新生成</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">#重新启动</span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line">#重新推送到远端</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>远端可访问</p>
+<hr/>
+
+<p><strong>至此完整的博客搭建完成</strong></p>
+<h2 id="5-Windows常用终端命令"><a href="#5-Windows常用终端命令" class="headerlink" title="5.Windows常用终端命令"></a>5.Windows常用终端命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">cd		切换目录</span><br><span class="line">cat		查看文件</span><br><span class="line">ls		查看目录</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">vim		进入编辑模式</span><br><span class="line">		h左   j上   k下  l右 	m中</span><br><span class="line">		i进入编辑模式  Esc退出编辑模式</span><br><span class="line">		shift+:末行   wq保存退出</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">mkdir	创建文件夹/目录</span><br><span class="line">type nul&gt;text.xml	创建文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ren 	重命名</span><br><span class="line">mv		移动文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rm		删除文件</span><br><span class="line">rmdir	删除文件夹</span><br><span class="line">			</span><br></pre></td></tr></table></figure>
+
+
                 
             </div>
             <hr/>
@@ -597,7 +671,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Achenzhiguo.github.io/categories/index.html">http://Achenzhiguo.github.io/categories/index.html</a>
+                    <a href="http://Achenzhiguo.github.io/2022/05/13/MyBlog%20%E6%90%AD%E5%BB%BA/">http://Achenzhiguo.github.io/2022/05/13/MyBlog%20%E6%90%AD%E5%BB%BA/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -674,7 +748,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Fri May 13 2022 12:03:07 GMT+0800',
+    id: 'Fri May 13 2022 15:44:23 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -708,13 +782,13 @@ gitment.render('gitment-content');
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2022/05/13/MyBlog%20%E6%90%AD%E5%BB%BA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -743,16 +817,16 @@ gitment.render('gitment-content');
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2022/05/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -773,7 +847,6 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
