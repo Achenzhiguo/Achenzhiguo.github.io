@@ -496,7 +496,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    755
+                    752
                 </div>
                 
 
@@ -523,56 +523,56 @@
 </blockquote>
 <p>安装完成后进入终端</p>
 <p>查看版本</p>
-<pre class=" language-xml"><code class="language-xml">#查看node版本
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#查看node版本</span>
 node -v
-#查看npm版本
-npm -v
+<span class="token comment" spellcheck="true">#查看npm版本</span>
+<span class="token function">npm</span> -v
 </code></pre>
 <h2 id="2-安装hexo博客框架"><a href="#2-安装hexo博客框架" class="headerlink" title="2,安装hexo博客框架"></a>2,安装hexo博客框架</h2><p>安装前</p>
 <p>由于npm外网比较慢,用cnpm来安装,,所以先借助npm来安装cnpm</p>
-<pre><code>#-p代表全局安装
-npm install -g cnmp --registry=https://registry.npm.taobao.org
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#-p代表全局安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g cnmp --registry<span class="token operator">=</span>https://registry.npm.taobao.org
 
-#查看cnpm版本
+<span class="token comment" spellcheck="true">#查看cnpm版本</span>
 cnpm -v
 </code></pre>
 <p>如果脚本被阻止了:参考:<a>https:/go.microsoft.com/fwlink/?LinkID=135170</a>这里进行设置</p>
 <p>更改执行策略</p>
-<pre><code>#更改策略
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#更改策略</span>
 Set-ExecutionPolicy -ExecutionPolicy Bypass
-#再次查看cnpm版本,就是测试可不可用
+<span class="token comment" spellcheck="true">#再次查看cnpm版本,就是测试可不可用</span>
 cnpm -v
 </code></pre>
 <p><strong>全局安装hexo博客框架</strong></p>
-<pre><code>#全局安装hexo
-cnpm install -g hexo-cli
-#查看
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#全局安装hexo</span>
+cnpm <span class="token function">install</span> -g hexo-cli
+<span class="token comment" spellcheck="true">#查看</span>
 hexo -v
 </code></pre>
 <p>建立一个blog文件夹,,不想用了/出错了,直接删除这个文件夹可以重新开始,</p>
-<pre class=" language-xml"><code class="language-xml">#创建一个文件夹,用来生成博客
-mkdir blog
-#进入blog目录
-cd blog
-#使用hexo生成
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#创建一个文件夹,用来生成博客</span>
+<span class="token function">mkdir</span> blog
+<span class="token comment" spellcheck="true">#进入blog目录</span>
+<span class="token function">cd</span> blog
+<span class="token comment" spellcheck="true">#使用hexo生成</span>
 hexo init
-#查看生成文件
-ls
+<span class="token comment" spellcheck="true">#查看生成文件</span>
+<span class="token function">ls</span>
 </code></pre>
 <p><strong>启动hexo</strong></p>
-<pre><code>#启动
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#启动</span>
 hexo s
 </code></pre>
 <p>本地启动默认在4000端口,即:<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></p>
 <p>新建一篇文章——-支持md</p>
-<pre><code>hexo n &quot;文章标题&quot;
+<pre class=" language-bash"><code class="language-bash">hexo n <span class="token string">"文章标题"</span>
 </code></pre>
 <p>博客搭建到此完成</p>
 <hr/>
 
 <h2 id="3-部署到远程"><a href="#3-部署到远程" class="headerlink" title="3,部署到远程"></a>3,部署到远程</h2><p>这里使用免费的,直接部署到GitHub上去</p>
-<pre><code>#在blog目录下安装git插件
-cnpm install --save hexo-deployer-git
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#在blog目录下安装git插件</span>
+cnpm <span class="token function">install</span> --save hexo-deployer-git
 </code></pre>
 <blockquote>
 <p>1.注册一个GitHub账号</p>
@@ -586,27 +586,27 @@ cnpm install --save hexo-deployer-git
 <p>配置环境变量重启终端即可</p>
 </blockquote>
 <p>修改blog下的_config.yml文件</p>
-<pre><code>vim _config.yml
+<pre class=" language-bash"><code class="language-bash">vim _config.yml
 </code></pre>
 <blockquote>
 <p>进入编辑界面——–末行(deployment配置项)——i进入编辑模式</p>
-<pre><code>deploy
+<pre class=" language-bash"><code class="language-bash">deploy
    type:git
-   repo:https://github.com/Achenzhiguo/Achenzhiguo.github.io.git #你的github创建的远程库地址
-   branch:master #不写默认也是master
+   repo:https://github.com/Achenzhiguo/Achenzhiguo.github.io.git <span class="token comment" spellcheck="true">#你的github创建的远程库地址</span>
+   branch:master <span class="token comment" spellcheck="true">#不写默认也是master</span>
    
 </code></pre>
 </blockquote>
-<pre><code>#退出编辑模式
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#退出编辑模式</span>
 Esc
 定位到末行
 shift+:
-#保存并退出
+<span class="token comment" spellcheck="true">#保存并退出</span>
 wq
 </code></pre>
-<pre><code>#部署到远程
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#部署到远程</span>
 hexo d
-#输入账号密码即可
+<span class="token comment" spellcheck="true">#输入账号密码即可</span>
 xxx
 </code></pre>
 <p>刷新github可看到多了一些文件,,,推送成功</p>
@@ -616,34 +616,34 @@ xxx
 <p>下载地址: github.com/litten/hexo-theme-yilia</p>
 </blockquote>
 <p>在blog目录下</p>
-<pre><code>#克隆值blog下的themes/yilia中
-git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
-#修改根目录下的_config.yml中的theme: yilia
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#克隆值blog下的themes/yilia中</span>
+<span class="token function">git</span> clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
+<span class="token comment" spellcheck="true">#修改根目录下的_config.yml中的theme: yilia</span>
 vim _config.yml
     i进入编辑模式
     themes: yilia
 wq
 </code></pre>
 <p>修改完成</p>
-<pre><code>#清理
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#清理</span>
 hexo clean
 
-#重新生成
+<span class="token comment" spellcheck="true">#重新生成</span>
 hexo g
 
-#重新启动
+<span class="token comment" spellcheck="true">#重新启动</span>
 hexo s
 
-#重新推送到远端
+<span class="token comment" spellcheck="true">#重新推送到远端</span>
 hexo d
 </code></pre>
 <p>远端可访问</p>
 <hr/>
 
 <p><strong>至此完整的博客搭建完成</strong></p>
-<h2 id="5-Windows常用终端命令"><a href="#5-Windows常用终端命令" class="headerlink" title="5.Windows常用终端命令"></a>5.Windows常用终端命令</h2><pre><code>cd        切换目录
-cat        查看文件
-ls        查看目录
+<h2 id="5-Windows常用终端命令"><a href="#5-Windows常用终端命令" class="headerlink" title="5.Windows常用终端命令"></a>5.Windows常用终端命令</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span>        切换目录
+<span class="token function">cat</span>        查看文件
+<span class="token function">ls</span>        查看目录
 
 
 vim        进入编辑模式
@@ -652,17 +652,17 @@ vim        进入编辑模式
         shift+:末行   wq保存退出
         
         
-mkdir    创建文件夹/目录
-type nul&gt;text.xml    创建文件
+<span class="token function">mkdir</span>    创建文件夹/目录
+<span class="token function">type</span> nul<span class="token operator">></span>text.xml    创建文件
 
 
 ren     重命名
-mv        移动文件
+<span class="token function">mv</span>        移动文件
 
 
 
-rm        删除文件
-rmdir    删除文件夹
+<span class="token function">rm</span>        删除文件
+<span class="token function">rmdir</span>    删除文件夹
             
 </code></pre>
 

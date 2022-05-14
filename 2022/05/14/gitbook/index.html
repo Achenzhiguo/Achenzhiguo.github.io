@@ -526,30 +526,30 @@
 <p>以本地版为例</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>gitbook 是基于node.js 的</p>
 <p>环境准备:  node.js  npm</p>
-<pre><code>#确认是否安装成功
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#确认是否安装成功</span>
 node -v
-npm -v
+<span class="token function">npm</span> -v
 </code></pre>
 <p>安装gitbook  , 可npm包中找到 gitbook-cli</p>
-<pre><code>#安装
-npm install -g gitbook-cli
-#安装完成后多一个gitbook命令
-#查看版本
-gitbook -V  #(注意这里是大V   而不是小v)
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g gitbook-cli
+<span class="token comment" spellcheck="true">#安装完成后多一个gitbook命令</span>
+<span class="token comment" spellcheck="true">#查看版本</span>
+gitbook -V  <span class="token comment" spellcheck="true">#(注意这里是大V   而不是小v)</span>
 </code></pre>
 <p>新建文件 夹 并初始化</p>
-<pre><code>#新建
-mkdir mybook
-#进入
-cd mybook
-#初始化(初始化成功后生成两个文件readme.md和summary.md )
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#新建</span>
+<span class="token function">mkdir</span> mybook
+<span class="token comment" spellcheck="true">#进入</span>
+<span class="token function">cd</span> mybook
+<span class="token comment" spellcheck="true">#初始化(初始化成功后生成两个文件readme.md和summary.md )</span>
 gitbook init
 </code></pre>
 <p><strong>无坑可跳过以下</strong></p>
 <h4 id="这里有个坑-执行gitbook-init报错"><a href="#这里有个坑-执行gitbook-init报错" class="headerlink" title="这里有个坑 执行gitbook init报错"></a>这里有个坑 执行gitbook init报错</h4><p>1,  安装速度卡顿问题解决</p>
 <p>​        科学上网        </p>
 <p>​        切换国内的淘宝镜像</p>
-<pre><code>npm config set registry=http://registry.npm.taobao.org -g
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> registry<span class="token operator">=</span>http://registry.npm.taobao.org -g
 </code></pre>
 <p>2,  node.js版本问题</p>
 <blockquote>
@@ -562,19 +562,19 @@ gitbook init
 <p>​                            如不能直接使用,,请自行配置环境变量</p>
 <p>这里本着以后方便  我选了  b   下载nvm 并查阅相关命令</p>
 <p>nvm命令下载和切换node.js版本</p>
-<pre><code>nvm -v                    查看nvm版本信息：
-nvm install 10.22.0        安装多版本 node/npm（以v10.22.0为例）：
+<pre class=" language-bash"><code class="language-bash">nvm -v                    查看nvm版本信息：
+nvm <span class="token function">install</span> 10.22.0        安装多版本 node/npm（以v10.22.0为例）：
 nvm use 10.22.0            使用特定Node版本（以v10.22.0为例）：
-nvm ls available        查看远程服务器上的可用Node版本：
-nvm ls                    查看本机的可用Node版本
+nvm <span class="token function">ls</span> available        查看远程服务器上的可用Node版本：
+nvm <span class="token function">ls</span>                    查看本机的可用Node版本
 </code></pre>
 <p>注意命令是   nvm 而不是  mvn</p>
-<pre><code>mvn是maven 的命令
+<pre class=" language-bash"><code class="language-bash">mvn是maven 的命令
 </code></pre>
 <p>还没完  这里是nvm的坑</p>
 <p>nvm切换node版本的坑</p>
 <p>​    显示切换成功   但是node -v 后仍是原来的高版本  , 切换无效</p>
-<pre><code>尝试解决
+<pre class=" language-bash"><code class="language-bash">尝试解决
 1 尝试切换成功后 , 重启终端  ,仍无效
 2  查询资料  nvm的使用过是先卸载原有node 且卸载彻底 且重启 再安装 否则无效
 </code></pre>
@@ -582,16 +582,16 @@ nvm ls                    查看本机的可用Node版本
 <p>nvm的坑到此结束</p>
 </blockquote>
 <h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>初始化和启动</p>
-<pre><code>#进入文件夹
-cd mybook
-#初始化
-#生成两个文件  readme.md相当于首页    summary.md章节
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#进入文件夹</span>
+<span class="token function">cd</span> mybook
+<span class="token comment" spellcheck="true">#初始化</span>
+<span class="token comment" spellcheck="true">#生成两个文件  readme.md相当于首页    summary.md章节</span>
 gitbook init
-#交给npm管理  (可选)
-npm init
-#启动(默认localhost:4000)  (生成book文件夹可根据自身需求修改配置文件)
+<span class="token comment" spellcheck="true">#交给npm管理  (可选)</span>
+<span class="token function">npm</span> init
+<span class="token comment" spellcheck="true">#启动(默认localhost:4000)  (生成book文件夹可根据自身需求修改配置文件)</span>
 gitbook serve
-#打包构建
+<span class="token comment" spellcheck="true">#打包构建</span>
 gitbook build
 
 </code></pre>
