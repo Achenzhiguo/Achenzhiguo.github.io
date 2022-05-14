@@ -571,15 +571,80 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="说与你听"><a href="#说与你听" class="headerlink" title="说与你听"></a>说与你听</h1><h2 id="建站原因"><a href="#建站原因" class="headerlink" title="建站原因:"></a>建站原因:</h2><p>学以致用,想法再多,总要付诸于实践</p>
-<p>主要还是自己一时兴起,觉得新鲜,其实这是别人早就玩剩下的,虽然迟了,但是我不允许自己不知道或者还不会</p>
-<h2 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h2><p>记录生活成长点滴,捕捉生活中不经意的美好,并以这种方式永久的封存</p>
-<p>如果恰巧对你也有一丝帮助,也算是我为社会做点贡献了</p>
-<p>当然主要是怕自己忘了</p>
-<h2 id="状态描述-虽然也没有人关注"><a href="#状态描述-虽然也没有人关注" class="headerlink" title="状态描述(虽然也没有人关注)"></a>状态描述(虽然也没有人关注)</h2><p>现在是牛刀初试,,还有好多的功能和细节有待完善,</p>
-<p>近期不会进行维护,更新,大概2个月后,随着时间的宽裕,随着技术的提升,随着经济的积累,会每天抽出一点的时间来打造,,,这也是对自己的承诺</p>
-<p>纯记录,目前不考虑增加运营成分</p>
-<p>如需深入了解/合作 :可通过主页gmail  twitter  qq  都可找到我</p>
+                <h1 id="GitBook"><a href="#GitBook" class="headerlink" title="GitBook"></a>GitBook</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>最近发现自己的命令行操作实在太差  甚至有的常用的命令都忘了  ,  本着练习命令的原则  ,  自己搭建了个人博客  ,算是熟悉了一波, 然后在浏览优秀博客时 , 有博主提到gitbook , 出于好奇,  简单了解了下 ,  个人感觉还不错, 加上自己在练习命令  , 果断搞一个 ,搭建的时候遇到了一些坑 , 有必要记录一下 , 就当是给博客在补充点内容</p>
+<h2 id="GitBook简介"><a href="#GitBook简介" class="headerlink" title="GitBook简介"></a>GitBook简介</h2><p>GitBook 是一款现代化的文档平台，支持团队协作，可以在上面写产品文档、内部知识分享、接口文档等。GitBook 有网页版和本地版两种，网页版地址如下：<a href="https://link.zhihu.com/?target=https://www.gitbook.com/">https://www.gitbook.com/</a>，本地版地址如下：<a href="https://link.zhihu.com/?target=https://github.com/GitbookIO/gitbook">https://github.com/GitbookIO/gitbook</a>。</p>
+<p>本地版是基于 Node.js 开发的，所以需要本地安装 Node.js 环境，(本地版现已停止维护了，而且本地版的大部分功能网页版都支持)，</p>
+<p>网页版直接注册账号 , 按提示操作即可   没啥可说的   但是网页版本土访问是真的慢</p>
+<p>GitBook 和 GitHub 是什么关系呢？这是两个相互独立的网站，但是你在 GitBook 上创建的文档可以同步到 GitHub 仓库，每次对文档的修改都会生成一个 commit，GitBook 会自动帮你提交到 GitHub，这样有助于追溯历史版本。而你往 GitHub 提交的内容也会自动同步到 GitBook。</p>
+<p>以本地版为例</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>gitbook 是基于node.js 的</p>
+<p>环境准备:  node.js  npm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#确认是否安装成功</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+
+
+<p>安装gitbook  , 可npm包中找到 gitbook-cli</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#安装</span><br><span class="line">npm install -g gitbook-cli</span><br><span class="line">#安装完成后多一个gitbook命令</span><br><span class="line">#查看版本</span><br><span class="line">gitbook -V  #(注意这里是大V   而不是小v)</span><br></pre></td></tr></table></figure>
+
+<p>新建文件 夹 并初始化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#新建</span><br><span class="line">mkdir mybook</span><br><span class="line">#进入</span><br><span class="line">cd mybook</span><br><span class="line">#初始化(初始化成功后生成两个文件readme.md和summary.md )</span><br><span class="line">gitbook init</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>无坑可跳过以下</strong></p>
+<h4 id="这里有个坑-执行gitbook-init报错"><a href="#这里有个坑-执行gitbook-init报错" class="headerlink" title="这里有个坑 执行gitbook init报错"></a>这里有个坑 执行gitbook init报错</h4><p>1,  安装速度卡顿问题解决</p>
+<p>​        科学上网        </p>
+<p>​        切换国内的淘宝镜像</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=http://registry.npm.taobao.org -g</span><br></pre></td></tr></table></figure>
+
+<p>2,  node.js版本问题</p>
+<blockquote>
+<p>gitbook运行出错  ,  需要降低其版本,使用稳定版本</p>
+<p>解决办法</p>
+<p>​        a   卸载原有版本,,重装稳定版本</p>
+<p>​        b   使用node.js 的版本管理器 nvm-windows   作用可以切换node.js版本</p>
+<p>​                    nvm-windows下载地址:  github地址:  <a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows">https://github.com/coreybutler/nvm-windows</a>   </p>
+<p>​                            选择nvm-setup.下载   直接安装  (这里顺便提一句   这种命令式的尽量装在C盘   否则后续出各种各样的小问题)</p>
+<p>​                            如不能直接使用,,请自行配置环境变量</p>
+<p>这里本着以后方便  我选了  b   下载nvm 并查阅相关命令</p>
+<p>nvm命令下载和切换node.js版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;nvm -v					查看nvm版本信息：</span><br><span class="line">&gt;nvm install 10.22.0		安装多版本 node/npm（以v10.22.0为例）：</span><br><span class="line">&gt;nvm use 10.22.0			使用特定Node版本（以v10.22.0为例）：</span><br><span class="line">&gt;nvm ls available		查看远程服务器上的可用Node版本：</span><br><span class="line">&gt;nvm ls					查看本机的可用Node版本</span><br></pre></td></tr></table></figure>
+
+<p>注意命令是   nvm 而不是  mvn</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;mvn是maven 的命令</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>还没完  这里是nvm的坑</p>
+<p>nvm切换node版本的坑</p>
+<p>​    显示切换成功   但是node -v 后仍是原来的高版本  , 切换无效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;尝试解决</span><br><span class="line">&gt;1 尝试切换成功后 , 重启终端  ,仍无效</span><br><span class="line">&gt;2  查询资料  nvm的使用过是先卸载原有node 且卸载彻底 且重启 再安装 否则无效</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>卸载原来的版本重启后  </p>
+<p>nvm的坑到此结束</p>
+</blockquote>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>初始化和启动</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#进入文件夹</span><br><span class="line">cd mybook</span><br><span class="line">#初始化</span><br><span class="line">#生成两个文件  readme.md相当于首页    summary.md章节</span><br><span class="line">gitbook init</span><br><span class="line">#交给npm管理  (可选)</span><br><span class="line">npm init</span><br><span class="line">#启动(默认localhost:4000)  (生成book文件夹可根据自身需求修改配置文件)</span><br><span class="line">gitbook serve</span><br><span class="line">#打包构建</span><br><span class="line">gitbook build</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>插件使用</p>
+<p>用法：在book.json中添加<code>&quot;plugins&quot;</code>和<code>&quot;pluginConfig&quot;</code>字段。然后执行<code>gitbook install</code>，或者使用NPM安装<code>npm install gitbook-plugin-插件名</code>，也可以从源码GitHub地址中下载，放到<code>node_modules</code>文件夹里</p>
+<p>常用插件</p>
+<ol>
+<li>代码可复制</li>
+<li>高级搜索 </li>
+<li>导航目录折叠</li>
+<li>主题</li>
+<li>回到顶部</li>
+</ol>
+<p>详细使用见  :  gitbook文档  (<a target="_blank" rel="noopener" href="https://chrisniael.gitbooks.io/gitbook-documentation/content/index.html">介绍 | GitBook文档（中文版） (gitbooks.io)</a>) </p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>免费的 同博客   可以部署到gitee    github</p>
+<p>也可以自己购买或租用服务器</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ol>
+<li>近期命令:   git   node npm  cnpm  hexo  gitbook  nvm  win终端</li>
+<li>凡是命令 , 操作大都雷同  ,任何一个命令,  只要彻底研究过一次,理清功能,作用, 细节, 然后丢一篇文档即可上手 , 当然想要脱离文档 , 重点还是多敲!  多敲!  多敲!   </li>
+<li>无纸化办公的时代 , 免不了一些资料的记录 , 以后可以整理成电子书部署到网站上 , 也算是圆一圆小时候的出书梦</li>
+</ol>
 
                 
             </div>
@@ -606,7 +671,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Achenzhiguo.github.io/2022/05/14/%E8%AF%B4%E4%B8%8E%E4%BD%A0%E5%90%AC/">http://Achenzhiguo.github.io/2022/05/14/%E8%AF%B4%E4%B8%8E%E4%BD%A0%E5%90%AC/</a>
+                    <a href="http://Achenzhiguo.github.io/2022/05/14/gitbook/">http://Achenzhiguo.github.io/2022/05/14/gitbook/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -683,7 +748,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sat May 14 2022 04:02:46 GMT+0800',
+    id: 'Sat May 14 2022 06:42:29 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -712,9 +777,10 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/05/14/gitbook/">
                     <div class="card-image">
@@ -732,9 +798,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -743,6 +809,7 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -753,7 +820,7 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/13/MyBlog%20%E6%90%AD%E5%BB%BA/">
+                <a href="/2022/05/14/%E8%AF%B4%E4%B8%8E%E4%BD%A0%E5%90%AC/">
                     <div class="card-image">
                         
                         
@@ -770,7 +837,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
                             </span>
                         <span class="publish-author">
                             
