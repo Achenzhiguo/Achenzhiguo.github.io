@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -339,75 +339,12 @@
         </li>
         
         
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="http://github.com/Achenzhiguo" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
-            </a>
-        </li>
-        
     </ul>
 </div>
 
 
         </div>
 
-        
-            <style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
-
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
-
-<a href="http://github.com/Achenzhiguo" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewBox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
         
     </nav>
 
@@ -557,7 +494,17 @@
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    755
+                </div>
+                
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    3 分
+                </div>
                 
 
                 
@@ -576,35 +523,57 @@
 </blockquote>
 <p>安装完成后进入终端</p>
 <p>查看版本</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#查看node版本</span><br><span class="line">node -v</span><br><span class="line">#查看npm版本</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-xml"><code class="language-xml">#查看node版本
+node -v
+#查看npm版本
+npm -v
+</code></pre>
 <h2 id="2-安装hexo博客框架"><a href="#2-安装hexo博客框架" class="headerlink" title="2,安装hexo博客框架"></a>2,安装hexo博客框架</h2><p>安装前</p>
 <p>由于npm外网比较慢,用cnpm来安装,,所以先借助npm来安装cnpm</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#-p代表全局安装</span><br><span class="line">npm install -g cnmp --registry=https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line">#查看cnpm版本</span><br><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+<pre><code>#-p代表全局安装
+npm install -g cnmp --registry=https://registry.npm.taobao.org
 
+#查看cnpm版本
+cnpm -v
+</code></pre>
 <p>如果脚本被阻止了:参考:<a>https:/go.microsoft.com/fwlink/?LinkID=135170</a>这里进行设置</p>
 <p>更改执行策略</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#更改策略</span><br><span class="line">Set-ExecutionPolicy -ExecutionPolicy Bypass</span><br><span class="line">#再次查看cnpm版本,就是测试可不可用</span><br><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
-
+<pre><code>#更改策略
+Set-ExecutionPolicy -ExecutionPolicy Bypass
+#再次查看cnpm版本,就是测试可不可用
+cnpm -v
+</code></pre>
 <p><strong>全局安装hexo博客框架</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#全局安装hexo</span><br><span class="line">cnpm install -g hexo-cli</span><br><span class="line">#查看</span><br><span class="line">hexo -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code>#全局安装hexo
+cnpm install -g hexo-cli
+#查看
+hexo -v
+</code></pre>
 <p>建立一个blog文件夹,,不想用了/出错了,直接删除这个文件夹可以重新开始,</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#创建一个文件夹,用来生成博客</span><br><span class="line">mkdir blog</span><br><span class="line">#进入blog目录</span><br><span class="line">cd blog</span><br><span class="line">#使用hexo生成</span><br><span class="line">hexo init</span><br><span class="line">#查看生成文件</span><br><span class="line">ls</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-xml"><code class="language-xml">#创建一个文件夹,用来生成博客
+mkdir blog
+#进入blog目录
+cd blog
+#使用hexo生成
+hexo init
+#查看生成文件
+ls
+</code></pre>
 <p><strong>启动hexo</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#启动</span><br><span class="line">hexo s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code>#启动
+hexo s
+</code></pre>
 <p>本地启动默认在4000端口,即:<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></p>
 <p>新建一篇文章——-支持md</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;文章标题&quot;</span><br></pre></td></tr></table></figure>
-
+<pre><code>hexo n &quot;文章标题&quot;
+</code></pre>
 <p>博客搭建到此完成</p>
 <hr/>
 
 <h2 id="3-部署到远程"><a href="#3-部署到远程" class="headerlink" title="3,部署到远程"></a>3,部署到远程</h2><p>这里使用免费的,直接部署到GitHub上去</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#在blog目录下安装git插件</span><br><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
+<pre><code>#在blog目录下安装git插件
+cnpm install --save hexo-deployer-git
+</code></pre>
 <blockquote>
 <p>1.注册一个GitHub账号</p>
 <p>2.建立一个同名仓库且以.github.io结尾  (xxx.github.io)</p>
@@ -617,16 +586,29 @@
 <p>配置环境变量重启终端即可</p>
 </blockquote>
 <p>修改blog下的_config.yml文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
-
+<pre><code>vim _config.yml
+</code></pre>
 <blockquote>
 <p>进入编辑界面——–末行(deployment配置项)——i进入编辑模式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;deploy</span><br><span class="line">type:git</span><br><span class="line">repo:https://github.com/Achenzhiguo/Achenzhiguo.github.io.git #你的github创建的远程库地址</span><br><span class="line">branch:master #不写默认也是master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code>deploy
+   type:git
+   repo:https://github.com/Achenzhiguo/Achenzhiguo.github.io.git #你的github创建的远程库地址
+   branch:master #不写默认也是master
+   
+</code></pre>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#退出编辑模式</span><br><span class="line">Esc</span><br><span class="line">定位到末行</span><br><span class="line">shift+:</span><br><span class="line">#保存并退出</span><br><span class="line">wq</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#部署到远程</span><br><span class="line">hexo d</span><br><span class="line">#输入账号密码即可</span><br><span class="line">xxx</span><br></pre></td></tr></table></figure>
-
+<pre><code>#退出编辑模式
+Esc
+定位到末行
+shift+:
+#保存并退出
+wq
+</code></pre>
+<pre><code>#部署到远程
+hexo d
+#输入账号密码即可
+xxx
+</code></pre>
 <p>刷新github可看到多了一些文件,,,推送成功</p>
 <p>然后就可以使用    xxx.github.io    作为你的网址直接可以访问了</p>
 <h2 id="4-更换blog主题"><a href="#4-更换blog主题" class="headerlink" title="4.更换blog主题"></a>4.更换blog主题</h2><blockquote>
@@ -634,73 +616,61 @@
 <p>下载地址: github.com/litten/hexo-theme-yilia</p>
 </blockquote>
 <p>在blog目录下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#克隆值blog下的themes/yilia中</span><br><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line">#修改根目录下的_config.yml中的theme: yilia</span><br><span class="line">vim _config.yml</span><br><span class="line">	i进入编辑模式</span><br><span class="line">	themes: yilia</span><br><span class="line">wq</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<pre><code>#克隆值blog下的themes/yilia中
+git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
+#修改根目录下的_config.yml中的theme: yilia
+vim _config.yml
+    i进入编辑模式
+    themes: yilia
+wq
+</code></pre>
 <p>修改完成</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#清理</span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">#重新生成</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">#重新启动</span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line">#重新推送到远端</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<pre><code>#清理
+hexo clean
 
+#重新生成
+hexo g
+
+#重新启动
+hexo s
+
+#重新推送到远端
+hexo d
+</code></pre>
 <p>远端可访问</p>
 <hr/>
 
 <p><strong>至此完整的博客搭建完成</strong></p>
-<h2 id="5-Windows常用终端命令"><a href="#5-Windows常用终端命令" class="headerlink" title="5.Windows常用终端命令"></a>5.Windows常用终端命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">cd		切换目录</span><br><span class="line">cat		查看文件</span><br><span class="line">ls		查看目录</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">vim		进入编辑模式</span><br><span class="line">		h左   j上   k下  l右 	m中</span><br><span class="line">		i进入编辑模式  Esc退出编辑模式</span><br><span class="line">		shift+:末行   wq保存退出</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">mkdir	创建文件夹/目录</span><br><span class="line">type nul&gt;text.xml	创建文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ren 	重命名</span><br><span class="line">mv		移动文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rm		删除文件</span><br><span class="line">rmdir	删除文件夹</span><br><span class="line">			</span><br></pre></td></tr></table></figure>
+<h2 id="5-Windows常用终端命令"><a href="#5-Windows常用终端命令" class="headerlink" title="5.Windows常用终端命令"></a>5.Windows常用终端命令</h2><pre><code>cd        切换目录
+cat        查看文件
+ls        查看目录
 
+
+vim        进入编辑模式
+        h左   j上   k下  l右     m中
+        i进入编辑模式  Esc退出编辑模式
+        shift+:末行   wq保存退出
+        
+        
+mkdir    创建文件夹/目录
+type nul&gt;text.xml    创建文件
+
+
+ren     重命名
+mv        移动文件
+
+
+
+rm        删除文件
+rmdir    删除文件夹
+            
+</code></pre>
 
                 
             </div>
             <hr/>
 
             
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">erdongchen</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="http://Achenzhiguo.github.io/2022/05/13/MyBlog%20%E6%90%AD%E5%BB%BA/">http://Achenzhiguo.github.io/2022/05/13/MyBlog%20%E6%90%AD%E5%BB%BA/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="/about" target="_blank">erdongchen</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
 
 
 
@@ -734,33 +704,6 @@
     
 
     
-        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
-<link rel="stylesheet" href="/css/gitment.css">
-
-<div class="gitment-card card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="gitment-content" class="card-content"></div>
-</div>
-
-<script src="/libs/gitment/gitment.js"></script>
-<script>
-var gitment = new Gitment({
-    id: 'Fri May 13 2022 15:44:23 GMT+0800',
-    owner: '',
-    repo: '',
-    oauth: {
-        client_id: '',
-        client_secret: ''
-    }
-});
-
-gitment.render('gitment-content');
-</script>
-
-    
 
     
 
@@ -781,19 +724,18 @@ gitment.render('gitment-content');
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/14/%E8%AF%B4%E4%B8%8E%E4%BD%A0%E5%90%AC/">
+                <a href="/2022/05/14/shi-li/">
                     <div class="card-image">
                         
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="未来可期">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">未来可期</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
                         
                     </div>
                     <div class="publish-info">
@@ -802,11 +744,27 @@ gitment.render('gitment-content');
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            erdongchen
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -818,7 +776,7 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
+                <a href="/2022/05/13/linux-ji-ben-ming-ling/">
                     <div class="card-image">
                         
                         
@@ -854,6 +812,43 @@ gitment.render('gitment-content');
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: erdongChen<br />'
+            + '文章作者: erdongchen<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -977,6 +972,60 @@ gitment.render('gitment-content');
 
     <footer class="page-footer bg-color">
     
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="kugou"
+                   type="playlist"
+                   id="55122787"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='list'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='false'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -988,8 +1037,6 @@ gitment.render('gitment-content');
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
-            
-            
             
             
             
@@ -1010,7 +1057,7 @@ gitment.render('gitment-content');
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/Achenzhiguo" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1179,25 +1226,9 @@ $(function () {
 
     <!-- Baidu Push -->
 
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
     
     <script src="/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
